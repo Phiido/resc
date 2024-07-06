@@ -1,0 +1,12 @@
+Package: resc
+Title: Toolbox For Playing With Eurovision Data 
+Version: 0.0.0.9000
+Authors@R: 
+  person("Thomas", "Roosdorp", , "thomas@roosdorp.se", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0009-0002-5146-2777"))
+Description: A collection of tools specifically for playing with Eurovision 
+  Song Contest (ESC) data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
