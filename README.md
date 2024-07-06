@@ -4,6 +4,8 @@
 # resc
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/Phiido/resc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Phiido/resc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 A collection of tools specifically for playing with Eurovision Song
