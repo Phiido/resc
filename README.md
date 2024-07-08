@@ -5,8 +5,10 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/Phiido/resc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Phiido/resc/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/Phiido/resc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/phiido/resc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
+
+**! Currently still in early development !**
 
 A collection of tools specifically for playing with Eurovision Song
 Contest (ESC) data.

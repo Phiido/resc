@@ -20,7 +20,7 @@ The following are possible to subset:
 \item \code{cancelled}    - Returns years when the event was cancelled
 \item \code{one_round}    - Returns years that only had a Final round
 \item \code{two_round}    - Returns years that had one Semi-Final and one Final round
-\item \code{three_round}  - Returns years that had two Semi-Final and one Final round
+\item \code{three_round}  - Returns years that had two Semi-Finals and one Final round
 }
 
 See examples for detailed usage.
