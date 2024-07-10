@@ -1,18 +1,21 @@
 #' Get country codes for a vector of country names
 #'
-#' Finds country code for most countries using alpha-3 (ISO 3166) codes for most countries, and
-#' custom code for the others.
+#' Returns the corresponding country code for a vector of country names.
+#' Most countries are identified using alpha-3 (ISO 3166) codes.
+#' Exceptions are Yugoslavia, 'Serbia and Montenegro', and 'Rest of the World',
+#' which have custom codes.
 #'
 #' @details
-#' Yugoslavia and 'Serbia and Montenegro' are exceptions to alpha-3 as they are countries
-#' that no longer exists. In addition, 'Rest of the World' voting has its own
-#' custom country code of ROW.
+#' Yugoslavia and 'Serbia and Montenegro' are countries that no longer exist.
+#' 'Rest of the World' is a special case with its own country code, ROW.
 #'
 #' Uses [countrycode::codelist].
 #'
 #' @param name A character vector with country names
 #'
 #' @returns A character vector with country codes
+#' 
+#' @seealso [get_countryname()]
 #'
 #' @examples
 #' countries <- c("Sweden", "Italy", "Yugoslavia", "Rest of the World")
@@ -44,20 +47,22 @@ get_countrycode <- function(name) {
 
 #' Get country names from country codes
 #'
-#' Checks for countries participated in Eurovision Song Contest. Finds country
-#' name for most countries using alpha-3 (ISO 3166) codes, and custom code
-#' for the others.
+#' Returns the corresponding country name for a vector of country codes.
+#' Most countries are identified using alpha-3 (ISO 3166) codes.
+#' Exceptions are Yugoslavia, 'Serbia and Montenegro', and 'Rest of the World',
+#' which have custom codes.
 #'
 #' @details
-#' Yugoslavia and 'Serbia and Montenegro' are exceptions to alpha-3 as they are countries
-#' that no longer exists. In addition, 'Rest of the World' voting has its own
-#' country code of ROW.
+#' Yugoslavia and 'Serbia and Montenegro' are countries that no longer exist.
+#' 'Rest of the World' is a special case with its own country code, ROW.
 #'
 #' Uses [countrycode::codelist].
 #'
 #' @param code A character vector with country codes
 #'
 #' @returns A character vector with country names
+#' 
+#' @seealso [get_countrycode()]
 #'
 #' @examples
 #' country_codes <- c("SWE", "ITA", "YUG", "ROW")
@@ -88,13 +93,17 @@ get_countryname <- function(code) {
   return(names)
 }
 
-#' Is a country name or code valid within Eurovision
+#' Determine if a country name or code is valid within Eurovision
+#'
+#' This function checks if each input is a valid country name or code.
 #'
 #' @param x A character vector containing either country names or codes
+#' @return A logical vector indicating which inputs are valid
 #'
-#' @returns A logical vector
-#'
-#' @seealso [get_countrycode()] [get_countryname()]
+#' @details
+#' Validity is determined by checking if the input can be converted to a
+#' country code or name using the functions [get_countrycode()] and
+#' [get_countryname()].
 #'
 #' @examples
 #' is_valid_country("Sweden")

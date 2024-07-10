@@ -13,20 +13,23 @@ get_countryname(code)
 A character vector with country names
 }
 \description{
-Checks for countries participated in Eurovision Song Contest. Finds country
-name for most countries using alpha-3 (ISO 3166) codes, and custom code
-for the others.
+Returns the corresponding country name for a vector of country codes.
+Most countries are identified using alpha-3 (ISO 3166) codes.
+Exceptions are Yugoslavia, 'Serbia and Montenegro', and 'Rest of the World',
+which have custom codes.
 }
 \details{
-Yugoslavia and 'Serbia and Montenegro' are exceptions to alpha-3 as they are countries
-that no longer exists. In addition, 'Rest of the World' voting has its own
-country code of ROW.
+Yugoslavia and 'Serbia and Montenegro' are countries that no longer exist.
+'Rest of the World' is a special case with its own country code, ROW.
 
 Uses \link[countrycode:codelist]{countrycode::codelist}.
 }
 \examples{
-country_codes <- c('SWE', 'ITA', 'YUG', 'ROW')
+country_codes <- c("SWE", "ITA", "YUG", "ROW")
 
 get_countryname(country_codes)
 
+}
+\seealso{
+\code{\link[=get_countrycode]{get_countrycode()}}
 }

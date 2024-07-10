@@ -2,7 +2,7 @@
 % Please edit documentation in R/countries.R
 \name{is_valid_country}
 \alias{is_valid_country}
-\title{Is a country name or code valid within Eurovision}
+\title{Determine if a country name or code is valid within Eurovision}
 \usage{
 is_valid_country(x)
 }
@@ -10,19 +10,21 @@ is_valid_country(x)
 \item{x}{A character vector containing either country names or codes}
 }
 \value{
-A logical vector
+A logical vector indicating which inputs are valid
 }
 \description{
-Is a country name or code valid within Eurovision
+This function checks if each input is a valid country name or code.
+}
+\details{
+Validity is determined by checking if the input can be converted to a
+country code or name using the functions \code{\link[=get_countrycode]{get_countrycode()}} and
+\code{\link[=get_countryname]{get_countryname()}}.
 }
 \examples{
-is_valid_country('Sweden')
+is_valid_country("Sweden")
 
-country_mix <- c('Sweden', 'ITA', 'Artist', NA, 'ROW')
+country_mix <- c("Sweden", "ITA", "Artist", NA, "ROW")
 
 is_valid_country(country_mix)
 
-}
-\seealso{
-\code{\link[=get_countrycode]{get_countrycode()}} \code{\link[=get_countryname]{get_countryname()}}
 }

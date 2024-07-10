@@ -7,31 +7,27 @@
 get_years()
 }
 \value{
-a list of numeric vectors
+a list of named numeric vectors
 }
 \description{
-Builds a list with potential sets of years starting from contest start in
-1956 up until the current year.
+The function returns a list with vectors of years pertaining to Eurovision
+Song Contest. The list contains the following vectors:
 }
 \details{
-The following are possible to subset:
 \itemize{
-\item \code{all}          - Returns all years from contest start up until current year
-\item \code{cancelled}    - Returns years when the event was cancelled
-\item \code{one_round}    - Returns years that only had a Final round
-\item \code{two_round}    - Returns years that had one Semi-Final and one Final round
-\item \code{three_round}  - Returns years that had two Semi-Finals and one Final round
+\item \code{all}          - All years from contest start up until current year
+\item \code{cancelled}    - Years when the event was cancelled
+\item \code{one_round}    - Years that only had a Final round
+\item \code{two_round}    - Years that had one Semi-Final and one Final round
+\item \code{three_round}  - Years that had two Semi-Finals and one Final round
 }
-
-See examples for detailed usage.
 }
 \examples{
+# Get years that have had all three rounds
 esc_years <- get_years()
-
-# Which years have had all three rounds?
 esc_years$three_round
 
-# Which years were cancelled?
+# Get years when the event was cancelled
 esc_years$cancelled
 
 }

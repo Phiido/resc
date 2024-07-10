@@ -13,19 +13,23 @@ get_countrycode(name)
 A character vector with country codes
 }
 \description{
-Finds country code for most countries using alpha-3 (ISO 3166) codes for most countries, and
-custom code for the others.
+Returns the corresponding country code for a vector of country names.
+Most countries are identified using alpha-3 (ISO 3166) codes.
+Exceptions are Yugoslavia, 'Serbia and Montenegro', and 'Rest of the World',
+which have custom codes.
 }
 \details{
-Yugoslavia and 'Serbia and Montenegro' are exceptions to alpha-3 as they are countries
-that no longer exists. In addition, 'Rest of the World' voting has its own
-custom country code of ROW.
+Yugoslavia and 'Serbia and Montenegro' are countries that no longer exist.
+'Rest of the World' is a special case with its own country code, ROW.
 
 Uses \link[countrycode:codelist]{countrycode::codelist}.
 }
 \examples{
-countries <- c('Sweden', 'Italy', 'Yugoslavia', 'Rest of the World')
+countries <- c("Sweden", "Italy", "Yugoslavia", "Rest of the World")
 
 get_countrycode(countries)
 
+}
+\seealso{
+\code{\link[=get_countryname]{get_countryname()}}
 }
