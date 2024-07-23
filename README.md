@@ -20,7 +20,7 @@ You can install the development version of resc from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("Phiido/resc")
+devtools::install_github("thoroo/resc")
 ```
 
 ## Disclaimer
