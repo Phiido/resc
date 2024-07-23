@@ -14,7 +14,7 @@
 #' @param name A character vector with country names
 #'
 #' @returns A character vector with country codes
-#' 
+#'
 #' @seealso [get_countryname()]
 #'
 #' @examples
@@ -61,7 +61,7 @@ get_countrycode <- function(name) {
 #' @param code A character vector with country codes
 #'
 #' @returns A character vector with country names
-#' 
+#'
 #' @seealso [get_countrycode()]
 #'
 #' @examples
